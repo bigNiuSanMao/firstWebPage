@@ -14,19 +14,25 @@
         body {
             font-family: 'Arial', sans-serif;
             line-height: 1.6;
-            background: #f0f2f5;
+            background: linear-gradient(135deg, #f0f2f5, #dfe9f3);
             color: #333;
             padding: 20px;
         }
 
         .container {
-            max-width: 1000px;
+            display: flex;
+            max-width: 1200px;
             margin: 0 auto;
             background: white;
             padding: 30px;
             border-radius: 15px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
             animation: fadeIn 1s ease-in;
+        }
+
+        .left, .right {
+            flex: 1;
+            margin: 10px;
         }
 
         @keyframes fadeIn {
@@ -55,15 +61,16 @@
             transform: scale(1.02);
         }
 
-        .story-section {
+        .story-section, .event-section {
             margin: 30px 0;
             padding: 20px;
             border-left: 4px solid #f0ba41;
             background: #fff;
             transition: all 0.3s ease;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
         }
 
-        .story-section:hover {
+        .story-section:hover, .event-section:hover {
             transform: translateX(10px);
             box-shadow: 0 2px 15px rgba(0,0,0,0.1);
         }
@@ -85,8 +92,18 @@
             color: #0d8ecf;
         }
 
+        .contract-info {
+            background: #f9f9f9;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
         @media (max-width: 768px) {
             .container {
+                flex-direction: column;
                 padding: 15px;
             }
             
@@ -97,59 +114,62 @@
     </style>
 </head>
 <body>
+    <h1>Broccoli's Story & BNBChain Events</h1>
+    
+    <div class="contract-info">
+        <h2>Broccoli的Meme币合约地址</h2>
+        <p class="highlight">0x377df68a4418433a71d754c07859dd767f2cd4d6</p>
+    </div>
+
     <div class="container">
-        <h1>Broccoli's Story</h1>
-        
-        <img src="broccoli.jpg" alt="Broccoli - CZ的比利时马里努阿犬" class="hero-image">
-        
-        <div class="story-section">
-            <h2>Broccoli的故事开始</h2>
-            <p>一年半前，我和一位在迪拜拥有（真实的）动物园的朋友闲聊。出于好奇，我问他哪种狗狗最适应迪拜的夏季高温。当时我并没有养狗的计划。</p>
+        <div class="left">
+            <img src="broccoli.jpg" alt="Broccoli - CZ的比利时马里努阿犬" class="hero-image">
+            
+            <div class="story-section">
+                <h2>Broccoli的故事开始</h2>
+                <p>一年半前，我和一位在迪拜拥有（真实的）动物园的朋友闲聊。出于好奇，我问他哪种狗狗最适应迪拜的夏季高温。当时我并没有养狗的计划。</p>
+            </div>
+
+            <div class="story-section">
+                <h2>意外的相遇</h2>
+                <p>那天晚上，我的门铃响了，一只年轻的<span class="highlight">比利时马里努阿犬</span>出现在门口，带着自己的护照，这是那位动物园朋友送的礼物。</p>
+            </div>
+
+            <div class="story-section">
+                <h2>名字的由来</h2>
+                <p>我想要一个以B开头并且带有绿色含义的名字，所以我给他取名叫Broccoli（西兰花）。这个名字也有"blocky"的音，就像blockchain（区块链）一样。没办法摆脱加密货币的影响，哈哈。</p>
+            </div>
+
+            <div class="story-section">
+                <h2>成长故事</h2>
+                <p>Broccoli（就像我一样）没有得到proper的社交训练。他不太与其他狗狗交往。（像我一样）Broccoli对一切都很害怕。如果你朝他扔球，他不会追球，反而会躲得远远的。</p>
+            </div>
+
+            <div class="story-section">
+                <h2>现在的Broccoli</h2>
+                <p>经过这段时间的相处，Broccoli已经成长为一只强壮而自信的狗狗。即使我离开了将近一年，Broccoli依然记得我，总是想让我摸他的头。</p>
+            </div>
         </div>
 
-        <div class="story-section">
-            <h2>意外的相遇</h2>
-            <p>那天晚上，我的门铃响了，一只年轻的<span class="highlight">比利时马里努阿犬</span>出现在门口，带着自己的护照，这是那位动物园朋友送的礼物。</p>
-        </div>
+        <div class="right">
+            <div class="event-section">
+                <h2>BNBChain上的大事件</h2>
+                <p>根据最新的推特更新，Broccoli在BNBChain上的发展有了新的进展。以下是最新的视频动态：</p>
+                <a href="https://x.com/i/status/1890728201283891257" target="_blank" class="source-link">
+                    查看最新视频 →
+                </a>
+            </div>
 
-        <div class="story-section">
-            <h2>名字的由来</h2>
-            <p>我想要一个以B开头并且带有绿色含义的名字，所以我给他取名叫Broccoli（西兰花）。这个名字也有"blocky"的音，就像blockchain（区块链）一样。没办法摆脱加密货币的影响，哈哈。</p>
-        </div>
-
-        <div class="story-section">
-            <h2>成长故事</h2>
-            <p>Broccoli（就像我一样）没有得到proper的社交训练。他不太与其他狗狗交往。（像我一样）Broccoli对一切都很害怕。如果你朝他扔球，他不会追球，反而会躲得远远的。</p>
-        </div>
-
-        <div class="story-section">
-            <h2>现在的Broccoli</h2>
-            <p>经过这段时间的相处，Broccoli已经成长为一只强壮而自信的狗狗。即使我离开了将近一年，Broccoli依然记得我，总是想让我摸他的头。</p>
-        </div>
-
-        <div class="story-section">
-            <h2>Broccoli的Meme币</h2>
-            <p>我们为Broccoli创建了一个meme币！以下是合约地址：</p>
-            <p class="highlight">合约地址: 0x377df68a4418433a71d754c07859dd767f2cd4d6</p>
-        </div>
-
-        <div class="story-section">
-            <h2>最新动态</h2>
-            <p>根据最新的推特更新，Broccoli在BNBChain上的发展有了新的进展。更多细节请查看推特。</p>
-            <a href="https://x.com/cz_binance/status/1890728201283891257" target="_blank" class="source-link">
-                查看最新推文 →
+            <a href="https://x.com/cz_binance/status/1890071433214038103" target="_blank" class="source-link">
+                查看原始推文 →
             </a>
         </div>
-
-        <a href="https://x.com/cz_binance/status/1890071433214038103" target="_blank" class="source-link">
-            查看原始推文 →
-        </a>
     </div>
 
     <script>
         // 添加滚动时的动画效果
         document.addEventListener('DOMContentLoaded', function() {
-            const sections = document.querySelectorAll('.story-section');
+            const sections = document.querySelectorAll('.story-section, .event-section');
             
             function checkScroll() {
                 sections.forEach(section => {
